@@ -1,16 +1,38 @@
-# React + Vite
+# Sloon Yehansa Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Saloon Yehansa is a modern saloon  web application developed to simplify salon operations and improve customer experience. This frontend application provides an interactive and responsive user interface for both clients and administrators.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- User authentication and authorization
+- Client registration and login system
+- Secure password handling with show/hide password option
+- Forgot password with OTP email verification
+- Online salon appointment booking system
+- Real-time booking validation
+- Prevents duplicate bookings for the same service, date, and time
+- Bridal package slot management
+- Service listing and management
+- Salon gallery page
+- Customer reviews and ratings
+- AI chatbot support system
+- Responsive dashboard for admin and clients
+- Appointment history management
+- Profile management
+- Email notifications
+- Mobile responsive design
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React.js
+- React Router
+- Axios
+- Tailwind CSS / CSS
+- JavaScript
+- HTML5
+- Node.js API Integration
 
-## Expanding the ESLint configuration
+## 👤 Author
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Name:** Thushani Wanigasinghe  
+- **E-mail:** thushanimalsha42@gmail.com
