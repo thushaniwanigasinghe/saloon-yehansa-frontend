@@ -7,7 +7,7 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-neutral-950 text-gray-200 font-sans antialiased;
+    @apply bg-stone-50 dark:bg-neutral-950 text-stone-900 dark:text-gray-200 font-sans antialiased;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply tracking-tight;
