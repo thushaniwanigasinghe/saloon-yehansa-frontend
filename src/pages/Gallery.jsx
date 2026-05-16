@@ -77,17 +77,17 @@ const Gallery = () => {
   };
 
   return (
-    <div className="min-h-screen pt-20 pb-20 bg-neutral-950 text-white selection:bg-yellow-500/30">
+    <div className="min-h-screen pt-20 pb-20 bg-stone-50 dark:bg-neutral-950 text-stone-900 dark:text-white selection:bg-yellow-500/30">
       {/* Hero Section */}
       <div className="relative py-20 mb-10 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-neutral-800/50 via-neutral-950 to-neutral-950"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
-          <h1 className="text-5xl md:text-7xl font-light text-white mb-6 tracking-widest uppercase relative inline-block">
+          <h1 className="text-5xl md:text-7xl font-light text-stone-900 dark:text-white mb-6 tracking-widest uppercase relative inline-block">
             Our <span className="font-serif italic text-yellow-500 lowercase relative z-10">Gallery</span>
             {/* Decorative element */}
             <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-24 h-[1px] bg-gradient-to-r from-transparent via-yellow-500 to-transparent"></div>
           </h1>
-          <p className="text-gray-400 max-w-2xl mx-auto font-light text-lg md:text-xl mt-8">
+          <p className="text-white dark:text-gray-400 max-w-2xl mx-auto font-light text-lg md:text-xl mt-8">
             Step into our world of beauty and transformation. Experience the artistry of our professional stylists through our curated portfolio.
           </p>
         </div>
@@ -101,7 +101,7 @@ const Gallery = () => {
             <div 
               key={index} 
               onClick={() => setSelectedImage(img)}
-              className={`relative group overflow-hidden rounded-3xl border border-white/5 bg-neutral-900 cursor-pointer ${img.colSpan} ${img.rowSpan}`}
+              className={`relative group overflow-hidden rounded-3xl border border-stone-200 dark:border-white/5 bg-white dark:bg-neutral-900 cursor-pointer ${img.colSpan} ${img.rowSpan}`}
             >
               <img 
                 src={img.url.startsWith('http') ? `${img.url}?auto=format&fit=crop&w=1200&q=80` : img.url} 
@@ -112,7 +112,7 @@ const Gallery = () => {
               {/* Like Button overlay (always visible but subtle, gets opaque on hover or when liked) */}
               <button 
                 onClick={(e) => handleLike(e, index)}
-                className={`absolute top-4 right-4 z-20 p-3 rounded-full backdrop-blur-md transition-all duration-300 transform hover:scale-110 active:scale-95 ${likes[index] ? 'bg-red-500/20 text-red-500 shadow-[0_0_15px_rgba(239,68,68,0.3)]' : 'bg-black/30 text-white/70 hover:bg-black/50 hover:text-white'}`}
+                className={`absolute top-4 right-4 z-20 p-3 rounded-full backdrop-blur-md transition-all duration-300 transform hover:scale-110 active:scale-95 ${likes[index] ? 'bg-red-500/20 text-red-500 shadow-[0_0_15px_rgba(239,68,68,0.3)]' : 'bg-black/30 text-white/70 hover:bg-black/50 hover:text-white dark:hover:text-yellow-500'}`}
                 aria-label="Like photo"
               >
                 <HeartIcon size={20} filled={likes[index]} />
@@ -121,7 +121,7 @@ const Gallery = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/90 via-neutral-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end">
                 <div className="p-8 w-full transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
                   <div className="w-12 h-[2px] bg-yellow-500 mb-4 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 delay-100"></div>
-                  <h3 className="text-2xl md:text-3xl font-light text-white tracking-wide drop-shadow-md">{img.title}</h3>
+                  <h3 className="text-2xl md:text-3xl font-light text-stone-900 dark:text-white tracking-wide drop-shadow-md">{img.title}</h3>
                 </div>
               </div>
             </div>
@@ -133,7 +133,7 @@ const Gallery = () => {
           href="https://www.facebook.com/sa.nethuki.yehansha" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="block mt-24 relative overflow-hidden rounded-3xl bg-neutral-900 border border-white/10 group shadow-2xl cursor-pointer"
+          className="block mt-24 relative overflow-hidden rounded-3xl bg-white dark:bg-neutral-900 border border-stone-200 dark:border-white/10 group shadow-2xl cursor-pointer"
         >
           <div className="absolute inset-0 bg-gradient-to-r from-[#1877F2]/10 to-transparent z-0 transition-opacity duration-500 group-hover:opacity-80"></div>
           <div className="absolute top-0 right-0 -mt-16 -mr-16 text-[#1877F2]/10 group-hover:text-[#1877F2]/20 transition-colors duration-700">
@@ -142,13 +142,13 @@ const Gallery = () => {
           
           <div className="relative z-10 p-8 md:p-12 lg:p-16 flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="text-center lg:text-left">
-              <h2 className="text-3xl md:text-4xl font-light text-white mb-4 group-hover:text-[#1877F2] transition-colors duration-300">Want to see more of our work?</h2>
-              <p className="text-gray-400 text-lg max-w-2xl font-light">
+              <h2 className="text-3xl md:text-4xl font-light text-stone-900 dark:text-white mb-4 group-hover:text-[#1877F2] transition-colors duration-300">Want to see more of our work?</h2>
+              <p className="text-stone-600 dark:text-gray-400 text-lg max-w-2xl font-light">
                 Follow us on Facebook for daily updates, special offers, behind-the-scenes looks, and hundreds of beautiful client transformations.
               </p>
             </div>
             
-            <div className="flex-shrink-0 inline-flex items-center gap-3 px-8 py-4 bg-[#1877F2] group-hover:bg-[#166FE5] text-white rounded-full font-medium transition-all duration-300 shadow-lg group-hover:shadow-[#1877F2]/30 group-hover:-translate-y-1">
+            <div className="flex-shrink-0 inline-flex items-center gap-3 px-8 py-4 bg-[#1877F2] group-hover:bg-[#166FE5] text-stone-900 dark:text-white rounded-full font-medium transition-all duration-300 shadow-lg group-hover:shadow-[#1877F2]/30 group-hover:-translate-y-1">
               <FacebookIcon className="w-5 h-5" />
               <span>Visit Our Facebook Page</span>
               <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -161,11 +161,11 @@ const Gallery = () => {
       {/* Lightbox Modal */}
       {selectedImage && (
         <div 
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm transition-opacity duration-300"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-stone-50/90 dark:bg-black/90 backdrop-blur-sm transition-opacity duration-300"
           onClick={closeLightbox}
         >
           <button 
-            className="absolute top-6 right-6 p-2 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 rounded-full backdrop-blur-md transition-all duration-300"
+            className="absolute top-6 right-6 p-2 text-white/70 hover:text-stone-900 dark:hover:text-white bg-stone-100 dark:bg-white/10 hover:bg-white/20 rounded-full backdrop-blur-md transition-all duration-300"
             onClick={closeLightbox}
             aria-label="Close"
           >

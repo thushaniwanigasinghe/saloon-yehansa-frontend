@@ -32,22 +32,22 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen pt-20 bg-neutral-950 flex flex-col justify-center py-12 sm:px-6 lg:px-8 bg-[url('https://images.unsplash.com/photo-1521590832167-7bfcfaa6362f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center bg-blend-overlay bg-neutral-950/80">
-      <div className="sm:mx-auto sm:w-full sm:max-w-md backdrop-blur-md bg-black/40 p-8 rounded-3xl border border-white/10 shadow-2xl">
+    <div className="min-h-screen pt-20 bg-stone-50 dark:bg-neutral-950 flex flex-col justify-center py-12 sm:px-6 lg:px-8 bg-[url('https://images.unsplash.com/photo-1521590832167-7bfcfaa6362f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center bg-blend-overlay bg-neutral-950/80">
+      <div className="sm:mx-auto sm:w-full sm:max-w-md backdrop-blur-md bg-white/60 dark:bg-black/40 shadow-sm dark:shadow-none p-8 rounded-3xl border border-stone-200 dark:border-white/10 shadow-2xl">
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-light text-white tracking-widest">JOIN AURA</h2>
-          <p className="mt-2 text-sm text-gray-400">Create an account to start booking</p>
+          <h2 className="text-3xl font-light text-stone-900 dark:text-white tracking-widest">JOIN AURA</h2>
+          <p className="mt-2 text-sm text-stone-600 dark:text-gray-400">Create an account to start booking</p>
         </div>
 
         {error && <div className="bg-red-500/10 border border-red-500/50 text-red-500 p-3 rounded-lg mb-6 text-sm text-center">{error}</div>}
 
         <form className="space-y-5" onSubmit={submitHandler}>
           <div>
-            <label className="block text-xs font-medium text-gray-400 uppercase tracking-widest mb-1">Full Name</label>
+            <label className="block text-xs font-medium text-stone-600 dark:text-gray-400 uppercase tracking-widest mb-1">Full Name</label>
             <input
               type="text"
               required
-              className="appearance-none block w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all sm:text-sm"
+              className="appearance-none block w-full px-4 py-3 bg-white dark:bg-white/5 shadow-sm dark:shadow-none border border-stone-200 dark:border-white/10 rounded-xl text-stone-900 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all sm:text-sm"
               placeholder="Your Full Name"
               value={name}
               onChange={(e) => setName(e.target.value)}
@@ -55,11 +55,11 @@ const Register = () => {
           </div>
 
           <div>
-            <label className="block text-xs font-medium text-gray-400 uppercase tracking-widest mb-1">Email address</label>
+            <label className="block text-xs font-medium text-stone-600 dark:text-gray-400 uppercase tracking-widest mb-1">Email address</label>
             <input
               type="email"
               required
-              className="appearance-none block w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all sm:text-sm"
+              className="appearance-none block w-full px-4 py-3 bg-white dark:bg-white/5 shadow-sm dark:shadow-none border border-stone-200 dark:border-white/10 rounded-xl text-stone-900 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all sm:text-sm"
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -67,11 +67,11 @@ const Register = () => {
           </div>
           
           <div>
-            <label className="block text-xs font-medium text-gray-400 uppercase tracking-widest mb-1">Phone Number</label>
+            <label className="block text-xs font-medium text-stone-600 dark:text-gray-400 uppercase tracking-widest mb-1">Phone Number</label>
             <input
               type="text"
               required
-              className="appearance-none block w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all sm:text-sm"
+              className="appearance-none block w-full px-4 py-3 bg-white dark:bg-white/5 shadow-sm dark:shadow-none border border-stone-200 dark:border-white/10 rounded-xl text-stone-900 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all sm:text-sm"
               placeholder="Your phone number"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
@@ -79,19 +79,19 @@ const Register = () => {
           </div>
 
           <div>
-            <label className="block text-xs font-medium text-gray-400 uppercase tracking-widest mb-1">Password</label>
+            <label className="block text-xs font-medium text-stone-600 dark:text-gray-400 uppercase tracking-widest mb-1">Password</label>
             <div className="relative">
               <input
                 type={showPassword ? "text" : "password"}
                 required
-                className="appearance-none block w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all sm:text-sm pr-12"
+                className="appearance-none block w-full px-4 py-3 bg-white dark:bg-white/5 shadow-sm dark:shadow-none border border-stone-200 dark:border-white/10 rounded-xl text-stone-900 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all sm:text-sm pr-12"
                 placeholder="Create a password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
               <button
                 type="button"
-                className="absolute inset-y-0 right-0 pr-4 flex items-center text-gray-400 hover:text-white transition-colors"
+                className="absolute inset-y-0 right-0 pr-4 flex items-center text-stone-600 dark:text-gray-400 hover:text-stone-900 dark:hover:text-white transition-colors"
                 onClick={() => setShowPassword(!showPassword)}
               >
                 {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
@@ -103,7 +103,7 @@ const Register = () => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full flex justify-center py-3 px-4 border border-transparent rounded-xl shadow-sm text-sm font-bold text-black bg-yellow-500 hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 transition-all duration-300 uppercase tracking-widest disabled:opacity-50"
+              className="w-full flex justify-center py-3 px-4 border border-transparent rounded-xl shadow-sm text-sm font-bold text-black bg-yellow-500 hover:bg-black hover:text-white dark:hover:bg-yellow-500 dark:hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 transition-all duration-300 uppercase tracking-widest disabled:opacity-50"
             >
               {loading ? 'Creating Account...' : 'Create Account'}
             </button>
@@ -111,7 +111,7 @@ const Register = () => {
         </form>
 
         <div className="mt-6 text-center">
-          <p className="text-sm text-gray-400">
+          <p className="text-sm text-stone-600 dark:text-gray-400">
             Already have an account?{' '}
             <Link to="/login" className="font-medium text-yellow-500 hover:text-yellow-400 transition-colors">
               Sign in
